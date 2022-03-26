@@ -1,3 +1,33 @@
 {
-  "extends": "next/core-web-vitals"
+    "extends": "next/core-web-vitals",
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "rules": {
+        "eol-last": "off",
+        "import/prefer-default-export": 0,
+        "import/no-extraneous-dependencies": 0,
+        "import/no-unresolved": 1,
+        "no-console": "off",
+        "no-unused-vars": "error",
+        "max-len": ["error", { "code": 500, "tabWidth": 4 }],
+        "react/jsx-props-no-spreading": "off",
+        "no-underscore-dangle": "off"
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "paths": ["src"],
+                "extenstions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        }
+    }
 }
