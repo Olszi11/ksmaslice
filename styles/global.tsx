@@ -122,7 +122,7 @@ export const GlobalStyle = createGlobalStyle`
         }
 
         &:last-child {
-            margin-bottom: 48px;
+            margin-bottom: 0;
         }
 
         &:empty {
