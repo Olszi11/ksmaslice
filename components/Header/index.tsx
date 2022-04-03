@@ -3,6 +3,7 @@ import { Container } from 'components/Container';
 import Link from 'next/link';
 import Image from 'next/image';
 import { colors } from 'styles';
+import { media } from 'services/media';
 
 interface Navigation {
     slug: string;
@@ -67,6 +68,9 @@ Header.TopWrapper = styled.div`
 `;
 Header.TopContent = styled.div`
     margin-top: 8px;
+    ${media.max('lg')} {
+        display: none;
+    }
 `;
 Header.Heading = styled.h1`
     font-size: 25px;
@@ -90,11 +94,18 @@ Header.Bottom = styled.div`
     margin-top: -47px;
     padding-left: 151px;
     background-color: ${colors.dark};
+
+    ${media.max('lg')} {
+        display: none;
+    }
 `;
 Header.Logo = styled.div`
     margin: 0 40px 0 0;
     position: relative;
     z-index: 2;
+    ${media.max('lg')} {
+        max-width: 70px;
+    }
 `;
 
 Header.Nav = styled.nav`
