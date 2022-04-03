@@ -5,11 +5,8 @@ import Image from 'next/image';
 import { colors } from 'styles';
 
 interface Navigation {
-    createdAt: string;
-    publishedAt: string;
     slug: string;
     title: string;
-    updatedAt: string;
 }
 
 export const Header = ({ navigation }: { navigation: [] }) => {
